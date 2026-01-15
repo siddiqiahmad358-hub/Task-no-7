@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Task no 7[MainResult]</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        /* --------------------
+       GLOBAL STYLES
+    -------------------- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            overflow: hidden;
+        }
+
+        /* --------------------
+       HEADER
+    -------------------- */
+        header {
+            height: 80px;
+            background: #222;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* --------------------
+       FULL SCREEN LAYOUT
+       calc(100vh - header)
+    -------------------- */
+        main {
+            height: calc(100vh - 80px);
+            overflow-y: auto;
+        }
+
+        /* --------------------
+       GRID LAYOUT (Page)
+    -------------------- */
+        .layout {
+            display: grid;
+            grid-template-columns: 250px 1fr;
+            height: 100%;
+        }
+
+        /* --------------------
+       SIDEBAR
+    -------------------- */
+        .sidebar {
+            background: #444;
+            color: white;
+            padding: 20px;
+        }
+
+        /* --------------------
+       CONTENT AREA
+    -------------------- */
+        .content {
+            padding: 20px;
+        }
+
+        /* --------------------
+       FLEXBOX EXAMPLE
+    -------------------- */
+        .flex-box {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .flex-item {
+            background: #e0e0e0;
+            padding: 20px;
+            flex: 1;
+            text-align: center;
+        }
+
+        /* --------------------
+       ANIMATION
+    -------------------- */
+        .animated-box {
+            width: 100px;
+            height: 100px;
+            background: crimson;
+            margin-top: 30px;
+            animation: rotateScale 3s infinite;
+        }
+
+        @keyframes rotateScale {
+            0% {
+                transform: rotate(0deg) scale(1);
+            }
+
+            50% {
+                transform: rotate(180deg) scale(1.3);
+            }
+
+            100% {
+                transform: rotate(360deg) scale(1);
+            }
+        }
+
+        /* --------------------
+       MEDIA QUERIES
+    -------------------- */
+
+        /* Mobile */
+        @media (max-width: 600px) {
+            header {
+                height: 60px;
+            }
+
+            main {
+                height: calc(100vh - 60px);
+            }
+
+            .layout {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Tablet */
+        @media (min-width: 601px) and (max-width: 900px) {
+            .layout {
+                grid-template-columns: 200px 1fr;
+            }
+        }
+
+        /* Desktop */
+        @media (min-width: 901px) {
+            .layout {
+                grid-template-columns: 250px 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <h2>CSS Assignment Layout</h2>
+    </header>
+
+    <!-- MAIN -->
+    <main>
+        <div class="layout">
+
+            <!-- SIDEBAR -->
+            <aside class="sidebar">
+                <h3>Sidebar</h3>
+                <p>Grid layout</p>
+            </aside>
+
+            <!-- CONTENT -->
+            <section class="content">
+                <h3>Main Content</h3>
+                <p>This section uses <strong>calc(100vh - header height)</strong>.</p>
+
+                <!-- FLEXBOX -->
+                <div class="flex-box">
+                    <div class="flex-item">Flex Item 1</div>
+                    <div class="flex-item">Flex Item 2</div>
+                    <div class="flex-item">Flex Item 3</div>
+                </div>
+
+                <!-- ANIMATION --> 
+                <div class="animated-box"></div>
+
+            </section>
+
+        </div>
+    </main>
+
+</body>
+
+</html>
