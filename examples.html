@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task no 7[examples]</title>
+    <style>
+        .box-calc {
+            width: calc(100% - 100px);
+            height: 100px;
+            background: lightblue;
+        }
+
+        .calc-wh {
+            width: calc(50% - 50px);
+            height: calc(100vh - 500px);
+            background: lightcoral;
+        }
+
+        .header {
+            height: 80px;
+            background: #333;
+            color: white;
+            text-align: center;
+            line-height: 80px;
+        }
+
+        .content {
+            height: calc(100vh - 500px);
+            background: #295ae2;
+        }
+
+        .layout-flex {
+            display: flex;
+        }
+
+        aside {
+            width: 200px;
+            background: #ccc;
+        }
+
+        main {
+            flex: 1;
+            background: #f2f2f2;
+        }
+
+        .layout-grid {
+            display: grid;
+            grid-template-columns: 200px 1fr;
+        }
+
+        .flex-example {
+            display: flex;
+            gap: 10px;
+        }
+
+        .grid-example {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+        }
+
+        .flex-example div,
+        .grid-example div {
+            background: lightgreen;
+            padding: 20px;
+        }
+
+        @keyframes moveBox {
+            from {
+                transform: translateX(0);
+            }
+
+            to {
+                transform: translateX(200px);
+            }
+        }
+
+        .box-animate {
+            width: 50px;
+            height: 50px;
+            background: red;
+            animation: moveBox 2s infinite alternate;
+        }
+
+        @keyframes rotate {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        .rotate-box {
+            width: 60px;
+            height: 60px;
+            background: blue;
+            animation: rotate 2s linear infinite;
+        }
+
+        @keyframes scaleUp {
+            from {
+                transform: scale(1);
+            }
+
+            to {
+                transform: scale(1.3);
+            }
+        }
+
+        .scale-box {
+            width: 60px;
+            height: 60px;
+            background: green;
+            animation: scaleUp 1s infinite alternate;
+        }
+
+        .responsive-box {
+            padding: 20px;
+            background: orange;
+        }
+
+        /* Tablet */
+        @media (min-width: 768px) {
+            .responsive-box {
+                background: lightblue;
+            }
+        }
+
+        /* Desktop */
+        @media (min-width: 1024px) {
+            .responsive-box {
+                background: lightgreen;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h2>calc() Example</h2>
+
+    <div class="box-calc">Box using calc()</div>
+
+    <h2>calc() with Width & Height</h2>
+
+    <div class="calc-wh"></div>
+
+    <h2>100vh - Header Height</h2>
+
+    <header class="header">Header</header>
+    <section class="content">Main Content</section>
+
+    <h2>Layout using Flexbox</h2>
+
+    <div class="layout-flex">
+        <aside>Sidebar</aside>
+        <main>Main Content</main>
+    </div>
+
+    <h2>Layout using Grid</h2>
+
+    <div class="layout-grid">
+        <aside>Sidebar</aside>
+        <main>Main Content</main>
+    </div>
+
+    <h2>Flex vs Grid</h2>
+<h3>Flexbox</h3>
+    <div class="flex-example">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+<h3>Grid</h3>
+    <div class="grid-example">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+
+    <h2>@keyframes Example</h2>
+
+    <div class="box-animate"></div>
+
+    <h2>Rotate Animation</h2>
+
+    <div class="rotate-box"></div>
+
+    <h2>Scale Animation</h2>
+
+    <div class="scale-box"></div>
+
+    <h2>Media Queries Example</h2>
+
+    <div class="responsive-box">Resize Screen</div>
+    <br><br><br>
+</body>
+
+</html>
